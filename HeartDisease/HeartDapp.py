@@ -2,7 +2,8 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-model = joblib.load(r"C:\Users\aaish\New folder\Machine Learning\HeartDisease\LR_heart.pkl")
+model_path = os.path.join(os.path.dirname(__file__), "LR_heart.pkl")
+model = joblib.load(model_path)
 scaler = joblib.load(r"C:\Users\aaish\New folder\Machine Learning\HeartDisease\scaler.pkl")
 columns_exp = joblib.load(r"C:\Users\aaish\New folder\Machine Learning\HeartDisease\columns.pkl")
 
@@ -52,4 +53,5 @@ if st.button("Predict"):
     if prediction == 1:
         st.error("⚠️ High Risk of Heart Disease")
     else:
+
         st.success("✅ Low Risk of Heart Disease")
