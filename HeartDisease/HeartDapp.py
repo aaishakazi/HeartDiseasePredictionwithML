@@ -1,9 +1,15 @@
 import streamlit as st
 import pandas as pd
 import joblib
+from pathlib import Path
 
-model_path = os.path.join(os.path.dirname(__file__), "LR_heart.pkl")
+# Get the current working directory
+current_dir = Path.cwd()
+# Build the path to your model
+model_path = current_dir / "LR_heart.pkl"
+# Load the model
 model = joblib.load(model_path)
+
 scaler = joblib.load(r"C:\Users\aaish\New folder\Machine Learning\HeartDisease\scaler.pkl")
 columns_exp = joblib.load(r"C:\Users\aaish\New folder\Machine Learning\HeartDisease\columns.pkl")
 
@@ -55,3 +61,4 @@ if st.button("Predict"):
     else:
 
         st.success("✅ Low Risk of Heart Disease")
+
