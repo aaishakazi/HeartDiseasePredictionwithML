@@ -22,7 +22,7 @@ It involves **data analysis**, **feature engineering**, **training multiple mode
 
 3. **Streamlit Application**  
    - Built an interactive web app where users can input patient details (age, sex, cholesterol, etc.).  
-   - The model outputs a simple **“Yes / No”** answer to indicate if the person is at risk of heart disease.  
+   - The model outputs a prediction to indicate if the person is at risk of heart disease.  
 
 ---
 
