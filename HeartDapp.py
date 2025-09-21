@@ -5,8 +5,10 @@ from pathlib import Path
 
 model_path = Path("LR_heart.pkl")
 model = joblib.load(model_path)
-scaler = joblib.load(r"aaishakazi/HeartDiseasePredictionwithML/scaler.pkl")
-columns_exp = joblib.load(r"aaishakazi/HeartDiseasePredictionwithML/columns.pkl")
+scaler_path = Path("scaler.pkl")
+scaler = joblib.load(scaler_path)
+columnspath = Path("columns_exp")
+columns_exp = joblib.load(columnspath)
 
 st.title("Heart Predictions")
 st.markdown("Provide the details")
@@ -56,5 +58,6 @@ if st.button("Predict"):
     else:
 
         st.success("✅ Low Risk of Heart Disease")
+
 
 
