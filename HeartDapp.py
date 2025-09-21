@@ -7,7 +7,7 @@ model_path = Path("LR_heart.pkl")
 model = joblib.load(model_path)
 scaler_path = Path("scaler.pkl")
 scaler = joblib.load(scaler_path)
-columnspath = Path("columns_exp")
+columnspath = Path("columns_exp.pkl")
 columns_exp = joblib.load(columnspath)
 
 st.title("Heart Predictions")
@@ -58,6 +58,7 @@ if st.button("Predict"):
     else:
 
         st.success("✅ Low Risk of Heart Disease")
+
 
 
 
