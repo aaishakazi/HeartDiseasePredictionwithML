@@ -3,15 +3,9 @@ import pandas as pd
 import joblib
 from pathlib import Path
 
-# Get the current working directory
-current_dir = Path.cwd()
-# Build the path to your model
-model_path = current_dir / "LR_heart.pkl"
-# Load the model
-model = joblib.load(model_path)
-
-scaler = joblib.load(r"C:\Users\aaish\New folder\Machine Learning\HeartDisease\scaler.pkl")
-columns_exp = joblib.load(r"C:\Users\aaish\New folder\Machine Learning\HeartDisease\columns.pkl")
+model = joblib.load(r"aaishakazi/HeartDiseasePredictionwithML/LR_heart.pkl")
+scaler = joblib.load(r"aaishakazi/HeartDiseasePredictionwithML/scaler.pkl")
+columns_exp = joblib.load(r"aaishakazi/HeartDiseasePredictionwithML/columns.pkl")
 
 st.title("Heart Predictions")
 st.markdown("Provide the details")
