@@ -3,6 +3,7 @@ import pandas as pd
 import joblib
 from pathlib import Path
 
+# loading the files
 model_path = Path("LR_heart.pkl")
 model = joblib.load(model_path)
 scaler_path = Path("scaler.pkl")
