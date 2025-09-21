@@ -3,7 +3,8 @@ import pandas as pd
 import joblib
 from pathlib import Path
 
-model = joblib.load(r"aaishakazi/HeartDiseasePredictionwithML/LR_heart.pkl")
+model_path = Path("LR_heart.pkl")
+model = joblib.load(model_path)
 scaler = joblib.load(r"aaishakazi/HeartDiseasePredictionwithML/scaler.pkl")
 columns_exp = joblib.load(r"aaishakazi/HeartDiseasePredictionwithML/columns.pkl")
 
@@ -55,4 +56,5 @@ if st.button("Predict"):
     else:
 
         st.success("✅ Low Risk of Heart Disease")
+
 
